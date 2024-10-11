@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
+/* Variables */
+
+:root {
+    --primaryColor: #0D2F73;
+    --secondaryColor: #568AB9;
+    --tertiaryColor: #961215;
+    --quaternaryColor: #cc0000;
+    --backgroundColor: #F2F2F2;
+    --textColor: #0D2F73;
+    --tipography: "Exo 2", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(180deg, rgba(86, 138, 185, 1), rgba(242, 242, 242, 1) 100%);
+    font-family: var(--tipography);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+/* Menú de Navegación */
+.menuNav {
+    background-color: #f2f2f200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    font-family: var(--tipography);
+    font-size: 20px;
+
+}
+
+
+.logo-container {
+    width: 5vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.menu1,
+.menu2 {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu1 li,
+.menu2 li {
+    margin: 0 10px;
+}
+
+.logo-menu-container {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    color: var(--tertiaryColor);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.btncontactanos {
+    border-bottom: 2px solid var(--tertiaryColor);
+}
+
+.btnlogin {
+    background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
+    color: var(--backgroundColor);
+    border-radius: 25%;
+    padding: 15px 25px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--tertiaryColor);
+}
+
+.btnlogin:hover {
+    background: linear-gradient(180deg, rgba(86, 138, 185, 1) 53%, rgba(242, 242, 242, 1) 100%);
+    border: 2px solid var(--backgroundColor);
+
+}
+
+/* CONTENEDOR GENERAL CONTÁCTANOS */
+
+.contGeneralcont {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 80px;
+    margin: 30px;
+}
+
+/* TÍTULO CONTÁCTANOS */
+
+.tituloContactanos {
+    text-align: center;
+    color: var(--tertiaryColor);
+    font-size: 30px;
+}
+
+/* FLEX DE DATOS DE CONTACTO CON IMÁGENES */
+
+.contContacto {
+    width: 500px;
+    height: auto;
+    padding: 77px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+    background-color: #f2f2f259;
+    border-radius: 15px;
+}
+
+.contenedorChiq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloh3 h3 {
+    color: var(--quaternaryColor);
+    font-size: 30PX;
+}
+
+.tituloh3 p {
+    color: var(--textColor);
+    margin-top: 20PX;
+    font-size: 16px;
+    font-weight: 710;
+}
+
+.telefonito {
+    width: 60px;
+}
+
+.numeroCont {
+    color: var(--backgroundColor);
+    font-size: 23px;
+}
+
+.mensaje {
+    width: 80px;
+}
+
+.correo {
+    color: var(--backgroundColor);
+    font-size: 23px;
+}
+
+.Wsp {
+    width: 60px;
+}
+
+.numWsp {
+    color: var(--backgroundColor);
+    font-size: 23px;
+}
+
+.carro3_1 {
+    width: 430px;
+}
+
+
+/* FORMULARIO DE CONTACTO */
+
+.contact_form {
+    width: 460px;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #f2f2f259;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+
+.contact_form input {
+    background-color: var(--backgroundColor);
+    width: 420px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--quaternaryColor);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.contact_form textarea {
+    background-color: var(--backgroundColor);
+    width: 420px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--quaternaryColor);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+
+.contact_form label {
+    display: block;
+    float: center;
+}
+
+
+.contact_form button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
+    border-color: var(--quaternaryColor);
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+}
+
+
+.contact_form button p {
+    color: var(--backgroundColor);
+}
+
+.contact_form button:hover {
+    background: linear-gradient(180deg, rgba(13, 47, 115, 1) 53%, rgba(86, 138, 185, 1) 100%);
+    color: var(--backgroundColor);
+    border: 2px solid var(--primaryColor);
+}
+
+.contact_form span {
+    color: var(--tertiaryColor);
+}
+
+
+.aviso {
+    font-size: 13px;
+    color: var(--textColor);
+}
+
+
+.contact_form h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: var(--quaternaryColor);
+}
+
+
+.contact_form h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: var(--textColor);
+}
+
+
+.contact_form p {
+    font-size: 15px;
+    color: var(--textColor);
+}
+
+
+::-webkit-input-placeholder {
+    color: var(--secondaryColor);
+}
+
+
+::-webkit-textarea-placeholder {
+    color: var(--secondaryColor);
+}
+
+
+.formulario input:focus {
+    outline: 0;
+    border: 1px solid var(--secondaryColor);
+}
+
+
+.formulario textarea:focus {
+    outline: 0;
+    border: 1px solid var(--secondaryColor);
+}
+
+/* Pie de página */
+
+
+.pie-de-pagina {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.descripcion-foot {
+    color: var(--backgroundColor);
+    text-align: center;
+    font-size: 16px;
+}
+
+.contenedorFT2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoft2 {
+    color: var(--backgroundColor);
+    margin: 20px;
+}
+
+.logosContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.logosContacto img {
+    width: 70px;
+}
