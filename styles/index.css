@@ -31,42 +31,39 @@ body {
 /* Menú de Navegación */
 
 
-.menuNav {
-    background-color: #f2f2f200;
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-    font-family: var(--tipography);
-    font-size: 20px;
 
 }
 
+.menuNav {
+    background-color: #f2f2f200;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    font-family: var(--tipography);
+    font-size: 20px;
+}
+
+input {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
 
 .logo-container {
     width: 5vw;
     height: auto;
     border-radius: 20px;
+    border: 2px solid var(--tertiaryColor);
+    margin: 10px;
 }
 
-.menu1,
-.menu2 {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu1 li,
-.menu2 li {
-    margin: 0 10px;
-}
-
-.logo-menu-container {
-    display: flex;
-    align-items: center;
-}
 
 nav a {
     display: block;
@@ -76,12 +73,13 @@ nav a {
     text-decoration: none;
 }
 
-.btninicio {
+.btnInicio {
     border-bottom: 2px solid var(--backgroundColor);
 }
 
 .btnlogin {
     background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
+    color: var(--backgroundColor);
     border-radius: 25%;
     padding: 15px 25px;
 }
@@ -94,6 +92,21 @@ nav a:hover {
     background: linear-gradient(180deg, rgba(86, 138, 185, 1) 53%, rgba(242, 242, 242, 1) 100%);
     border: 2px solid var(--backgroundColor);
 
+}
+
+/* Menú hamburguesa */
+
+
+header input:not(:checked)+nav {
+    transform: translateY(0px);
+    transition: all 1000ms ease-in-out;
+}
+
+header input:checked+nav {
+    gap: 5px;
+    padding: 5px;
+    transform: translateY(-200%);
+    transition: all 1000ms ease-in-out;
 }
 
 /* PRIMER PÁRRAFO */
@@ -121,7 +134,7 @@ nav a:hover {
     width: 52vw;
 }
 
-/* CAJAS DE HOVER Y DESCRIPCIÓN DE DIE-CAST MARKET */ 
+/* CAJAS DE HOVER Y DESCRIPCIÓN DE DIE-CAST MARKET */
 
 
 .cajasHover {
@@ -129,8 +142,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:10px
-    
+    gap: 10px
 }
 
 .contDescripción {
@@ -170,18 +182,19 @@ nav a:hover {
     text-align: center;
 }
 
-.contDescripcion .box:hover > .capa1 {
+.contDescripcion .box:hover>.capa1 {
     opacity: 1;
     visibility: visible;
 }
-.contDescripcion .box:hover:hover > .capa1 h4 {
+
+.contDescripcion .box:hover:hover>.capa1 h4 {
     margin-top: 40px;
     margin-bottom: 15px;
     padding-left: 10px;
     margin-right: 10px;
 }
 
-.contDescripcion .box .capa1 h4{
+.contDescripcion .box .capa1 h4 {
     color: var(--tertiaryColor);
     font-size: 22px;
     margin-bottom: 120px;
@@ -294,7 +307,7 @@ nav a:hover {
     width: 70px;
 }
 
-/* Media queries para Tablet */ 
+/* Media queries para Tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     body {
@@ -303,80 +316,19 @@ nav a:hover {
 
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-
-    }
-
-    /* Menú de Navegación */
+    /* Menu de Navegación */
 
     .menuNav {
-        background-color: #f2f2f200;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
-        padding: 20px;
-        font-family: var(--tipography);
-        font-size: 16px;
-
+        gap: 3px;
+        font-size: 17px;
     }
 
     .logo-container {
-        width: 5vw;
-        height: auto;
-        border-radius: 20px;
-    }
-
-    .menu1,
-    .menu2 {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu1 li,
-    .menu2 li {
-        margin: 0 10px;
-    }
-
-    .logo-menu-container {
-        display: flex;
-        align-items: center;
-    }
-
-    nav a {
-        display: block;
-        color: var(--backgroundColor);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    .btninicio {
-        border-bottom: 2px solid var(--backgroundColor);
-    }
-
-    .btnlogin {
-        background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
-        border-radius: 25%;
-        padding: 15px 25px;
-    }
-
-    nav a:hover {
-        border-bottom: 2px solid var(--backgroundColor);
-    }
-
-    .btnlogin:hover {
-        background: linear-gradient(180deg, rgba(86, 138, 185, 1) 53%, rgba(242, 242, 242, 1) 100%);
-        border: 2px solid var(--backgroundColor);
-
+        width: 8vw;
     }
 
     /* PRIMER PÁRRAFO */
+
     .imagen_principal {
         display: flex;
         flex-direction: column;
@@ -407,81 +359,81 @@ nav a:hover {
         width: 80vw;
     }
 
-    /* CAJAS DE HOVER Y DESCRIPCIÓN DE DIE-CAST MARKET */ 
+    /* CAJAS DE HOVER Y DESCRIPCIÓN DE DIE-CAST MARKET */
 
 
-.cajasHover {
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:10px
-    
-}
+    .cajasHover {
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    }
 
-.contDescripción {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .contDescripción {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.contDescripcion .box {
-    position: relative;
-    width: 300px;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 30px;
-    cursor: pointer;
-}
+    .contDescripcion .box {
+        position: relative;
+        width: 300px;
+        height: 180px;
+        overflow: hidden;
+        border-radius: 30px;
+        cursor: pointer;
+    }
 
-.contDescripcion .box img {
-    width: 100%;
-    height: 100%;
-    transition: all 500ms ease-out;
-}
+    .contDescripcion .box img {
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out;
+    }
 
-.contDescripcion .box .capa1 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #f2f2f2d2;
-    border-radius: 10px;
-    transition: all 500ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-}
+    .contDescripcion .box .capa1 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #f2f2f2d2;
+        border-radius: 10px;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
 
-.contDescripcion .box:hover > .capa1 {
-    opacity: 1;
-    visibility: visible;
-}
-.contDescripcion .box:hover:hover > .capa1 h4 {
-    margin-top: 50px;
-    margin-bottom: 15px;
-}
+    .contDescripcion .box:hover>.capa1 {
+        opacity: 1;
+        visibility: visible;
+    }
 
-.contDescripcion .box .capa1 h4{
-    color: var(--tertiaryColor);
-    font-size: 15px;
-    font-weight: 400px;
-    margin-bottom: 120px;
-    transition: all 500ms ease-out;
-    margin-top: 50px;
-}
+    .contDescripcion .box:hover:hover>.capa1 h4 {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
 
-.contDescripcion .box .capa1 p {
-    color: var(--primaryColor);
-    font-size: 10px;
-    line-height: 1.5;
-    width: 100%;
-    max-width: 320px;
-    margin: auto;
-}
+    .contDescripcion .box .capa1 h4 {
+        color: var(--tertiaryColor);
+        font-size: 15px;
+        font-weight: 400px;
+        margin-bottom: 120px;
+        transition: all 500ms ease-out;
+        margin-top: 50px;
+    }
+
+    .contDescripcion .box .capa1 p {
+        color: var(--primaryColor);
+        font-size: 10px;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 320px;
+        margin: auto;
+    }
 
 
     /* CUADRO INFERIOR CON LOS AUTOS Y EL BOTÓN */
@@ -578,4 +530,249 @@ nav a:hover {
     .logosContacto img {
         width: 70px;
     }
+}
+
+/* Media queries para teléfonos celulares */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        width: 100vw;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+
+    .menuNav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        background-color: var(--secondaryColor);
+
+    }
+
+    nav a {
+        color: var(--primaryColor);
+    }
+
+    .btnInicio {
+        border-bottom: 2px solid var(--primaryColor);
+    }
+
+    nav a:hover {
+        border-bottom: 2px solid var(--primaryColor);
+    }
+
+    .logo-container {
+        position: relative;
+        width: 20vw;
+        height: auto;
+        z-index: 1;
+    }
+
+
+    header input:not(:checked)+nav {
+        transform: translateY(-200%);
+        transition: all 1000ms ease-in-out;
+    }
+
+    header input:checked+nav {
+        background-color: var(--backgroundColor);
+        gap: 10px;
+        padding: 5px;
+        transform: translateY(0px);
+        transition: all 1000ms ease-in-out;
+    }
+
+    /* PRIMER PÁRRAFO */
+
+    .imagen_principal h2 {
+        position: unset;
+        text-align: center;
+        font-size: 55px;
+        color: var(--backgroundColor);
+        width: 90%;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .imagen_principal {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    }
+
+    /* Imagen Principal */
+
+    .contenedor_imagen1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .imagenprincipal {
+        width: 80vw;
+    }
+
+
+
+    /* CAJAS DE HOVER Y DESCRIPCIÓN DE DIE-CAST MARKET */
+
+    .cajasHover {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px
+    }
+    
+    .contDescripción {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .contDescripcion .box {
+        position: relative;
+        width: 410px;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    
+    .contDescripcion .box img {
+        width: 100vw;
+        height: 100%;
+        transition: all 500ms ease-out;
+    }
+    
+    .contDescripcion .box .capa1 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #f2f2f2d2;
+        border-radius: 30px;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    
+    .contDescripcion .box:hover>.capa1 {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .contDescripcion .box:hover:hover>.capa1 h4 {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .contDescripcion .box .capa1 h4 {
+        color: var(--tertiaryColor);
+        font-size: 22px;
+        margin-bottom: 120px;
+        transition: all 500ms ease-out;
+        margin-top: 50px;
+    }
+    
+    .contDescripcion .box .capa1 p {
+        color: var(--primaryColor);
+        font-size: 16px;
+        line-height: 1.5;
+        width: 90%;
+        max-width: 280px;
+        margin: auto;
+    }
+
+    /* CUADRO INFERIOR CON LOS AUTOS Y EL BOTÓN */
+
+.contenedor3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car_container {
+    background-color: var(--backgroundColor);
+    border: 3px solid var(--primaryColor);
+    border-radius: 25px;
+    width: 95vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.autosbox {
+    width: 290px;
+    height: auto;
+}
+
+/* Estilos para el botón */
+.btnexplorar {
+    background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
+    color: var(--backgroundColor);
+    border-radius: 25%;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.btnexplorar:hover {
+    background: linear-gradient(180deg, rgba(13, 47, 115, 1) 53%, rgba(86, 138, 185, 1) 100%);
+    color: var(--backgroundColor);
+    border: 2px solid var(--primaryColor);
+}
+
+
+    
+
+
+    
+    /* Pie de página */
+
+    .pie-de-pagina {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contenedorFT2,
+    .descripcion-foot {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 14px;
+    }
+
+
+    .logosContacto {
+        gap: 30px;
+    }
+
 }

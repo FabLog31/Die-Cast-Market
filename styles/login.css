@@ -25,53 +25,46 @@ body {
 
 
 /* Menú de Navegación */
-.menuNav {
-    background-color: #f2f2f200;
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-    font-family: var(--tipography);
-    font-size: 20px;
 
 }
 
+.menuNav {
+    background-color: #f2f2f200;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    font-family: var(--tipography);
+    font-size: 20px;
+}
+
+header input {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
 
 .logo-container {
     width: 5vw;
     height: auto;
     border-radius: 20px;
+    border: 2px solid var(--tertiaryColor);
+    margin: 10px;
 }
 
-.menu1,
-.menu2 {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu1 li,
-.menu2 li {
-    margin: 0 10px;
-}
-
-.logo-menu-container {
-    display: flex;
-    align-items: center;
-}
 
 nav a {
     display: block;
-    color: var(--backgroundColor);
+    color: var(--tertiaryColor);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
-
-.btnproductos {
-    border-bottom: 2px solid var(--tertiaryColor);
 }
 
 .btnlogin {
@@ -91,10 +84,24 @@ nav a:hover {
     border: 2px solid var(--tertiaryColor);
 
 }
+/* Menú hamburguesa */
+
+
+header input:not(:checked)+nav {
+    transform: translateY(0px);
+    transition: all 1000ms ease-in-out;
+}
+
+header input:checked+nav {
+    gap: 5px;
+    padding: 5px;
+    transform: translateY(-200%);
+    transition: all 1000ms ease-in-out;
+}
+
 
 
 /* Login y registro */ 
-
 
 .container {
     width: 100vw;
@@ -200,7 +207,7 @@ nav a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     gap: 10px;
 }
 
@@ -231,4 +238,117 @@ nav a:hover {
 
 .logosContacto img {
     width: 70px;
+}
+
+/* Media Queries para Tablet */ 
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    /* Menu de Navegación */
+    .menuNav {
+        gap: 3px;
+    font-size: 17px;
+    }
+
+    .logo-container {
+        width: 8vw;
+    }
+
+   .menuNav {
+        font-size: 17px;
+       
+    }
+
+    .container {
+        width: 100vw;
+        height: 885px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+
+}
+
+/* Media queries para teléfonos celulares */ 
+
+@media screen and (max-width: 768px) {
+
+body {
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+.menuNav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    
+}
+
+.logo-container {
+    position: relative;
+    width: 20vw;
+    height: auto;
+    z-index: 1;
+}
+
+main {
+    width: 100vw;
+}
+
+header input:not(:checked)+nav {
+    transform: translateY(-200%);
+    transition: all 1000ms ease-in-out;
+}
+
+header input:checked+nav {
+    background-color: var(--backgroundColor);
+    gap: 10px;
+    padding: 5px;
+    transform: translateY(0px);
+    transition: all 1000ms ease-in-out;
+}
+
+/* Sección Login */
+
+.container {
+    width: 90vw;
+    height: 780px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+/* Pie de página */
+
+.pie-de-pagina {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedorFT2,
+.descripcion-foot {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 14px;
+}
+
+
+.logosContacto {
+    gap: 30px;
+}
+
 }

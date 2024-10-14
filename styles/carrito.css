@@ -72,7 +72,7 @@ nav a {
     text-decoration: none;
 }
 
-.btnproductos {
+.btnCarrito {
     border-bottom: 2px solid var(--tertiaryColor);
 }
 
@@ -108,144 +108,25 @@ header input:checked+nav {
     transition: all 1000ms ease-in-out;
 }
 
-/* Titulo de Nuestra exhibición */
+/* Imagen para la construcción de la página */
 
-.titulodeexhibicion {
-    text-align: center;
-    color: var(--tertiaryColor);
-    font-size: 30px;
-}
-
-/* CONTENEDOR DE LOS PRODUCTOS */
-
-main {
+.ContConstr {
     width: 100vw;
-}
-
-.contenedorProductos {
-    background-color: #f2f2f23d;
-    border-radius: 20px;
-    height: auto;
-    margin: 50px;
-    padding: 30px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
     justify-content: center;
+    margin: 39px;
     align-items: center;
-
+    gap: 30px
+    
 }
-
-.contenedorP {
-    width: 400px;
-    height: 370px;
-    place-content: center;
+.const {
+    width: 750px;
+    height: auto;
 }
-
-.contenedorIMGp {
-    margin-bottom: 20px;
-    max-width: 90vw;
-}
-
-
-
-[class*="div"] {
-    background-color: var(--backgroundColor);
-    border-radius: 25px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-
-.descripcionP {
-    list-style: none;
+.ContConstr h2{
     text-align: center;
-}
-
-.btnagCarrito {
-    background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
-    color: var(--backgroundColor);
-    border-radius: 25%;
-    margin: 10px;
-    padding: 8px 10px;
-    text-align: center;
-    font-size: 10px;
-    text-decoration: none;
-    border-radius: 8px;
-    cursor: pointer;
-
-}
-
-/* Hover effect para el botón */
-.btnexplorar:hover {
-    background: linear-gradient(180deg, rgba(13, 47, 115, 1) 53%, rgba(86, 138, 185, 1) 100%);
-    color: var(--backgroundColor);
-    border: 2px solid var(--primaryColor);
-}
-
-
-.imgloco {
-    width: 160px;
-}
-
-
-.imgHomer {
-    width: 150px;
-}
-
-.imgLambo1 {
-    width: 160px;
-}
-
-
-.imgDeadpool {
-    width: 185px;
-}
-
-
-.imgBat {
-    width: 145px;
-}
-
-.imgFerrari1 {
-    width: 280px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-
-.imgLaferari {
-    width: 250px;
-    margin-top: 35px;
-    margin-bottom: 45px;
-}
-
-
-.imgLambo2 {
-    width: 152px;
-}
-
-
-.imgWheelie {
-    width: 145px;
-}
-
-
-.imgTriumph {
-    width: 150px;
-}
-
-
-.imgSupra {
-    width: 157px;
-}
-
-
-.imgYW {
-    width: 157px;
-    margin: 25px auto;
+    font-size: 70px;
+    color: var(--primaryColor);
 }
 
 /* Pie de página */
@@ -310,20 +191,28 @@ main {
         width: 8vw;
     }
 
+    /* Cuerpo de construcción */
 
-    /* Titulo Nosotros */
 
-    .titulodeexhibicion {
-        font-size: 25px;
-
+    .ContConstr {
+        width: 100vw;
+        height: 990px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 39px;
+        align-items: center;
+        gap: 30px
+        
     }
-
-
-    /* CONTENEDOR DE LOS PRODUCTOS */
-    
-    .contenedorProductos {
-        margin: 15px;
-        padding: 15px;
+    .const {
+        width: 750px;
+        height: auto;
+    }
+    .ContConstr h2{
+        text-align: center;
+        font-size: 60px;
+        color: var(--primaryColor);
     }
 
     /* Pie de página */
@@ -376,21 +265,26 @@ main {
         z-index: 1;
     }
 
-    main {
-        width: 100vw;
-    }
+       /* Cuerpo de construcción */
 
-    header input:not(:checked)+nav {
-        transform: translateY(-200%);
-        transition: all 1000ms ease-in-out;
+    .ContConstr {
+        width: 85vw;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px
+        
     }
-
-    header input:checked+nav {
-        background-color: var(--backgroundColor);
-        gap: 10px;
-        padding: 5px;
-        transform: translateY(0px);
-        transition: all 1000ms ease-in-out;
+    .const {
+        width: 350px;
+        height: auto;
+    }
+    .ContConstr h2{
+        text-align: center;
+        font-size: 35px;
+        color: var(--primaryColor);
     }
 
     /* Pie de página */

@@ -27,42 +27,39 @@ body {
 }
 
 /* Menú de Navegación */
-.menuNav {
-    background-color: #f2f2f200;
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-    font-family: var(--tipography);
-    font-size: 20px;
 
 }
 
+.menuNav {
+    background-color: #f2f2f200;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    font-family: var(--tipography);
+    font-size: 20px;
+}
+
+header input {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
 
 .logo-container {
     width: 5vw;
     height: auto;
     border-radius: 20px;
+    border: 2px solid var(--tertiaryColor);
+    margin: 10px;
 }
 
-.menu1,
-.menu2 {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu1 li,
-.menu2 li {
-    margin: 0 10px;
-}
-
-.logo-menu-container {
-    display: flex;
-    align-items: center;
-}
 
 nav a {
     display: block;
@@ -72,7 +69,7 @@ nav a {
     text-decoration: none;
 }
 
-.btncontactanos {
+.btnContactanos {
     border-bottom: 2px solid var(--tertiaryColor);
 }
 
@@ -93,12 +90,27 @@ nav a:hover {
 
 }
 
+/* Menú hamburguesa */
+
+
+header input:not(:checked)+nav {
+    transform: translateY(0px);
+    transition: all 1000ms ease-in-out;
+}
+
+header input:checked+nav {
+    gap: 5px;
+    padding: 5px;
+    transform: translateY(-200%);
+    transition: all 1000ms ease-in-out;
+}
+
 /* CONTENEDOR GENERAL CONTÁCTANOS */
 
 .contGeneralcont {
     display: flex;
     justify-content: center;
-    align-items:flex-start;
+    align-items: flex-start;
     gap: 80px;
     margin: 30px;
 }
@@ -348,4 +360,183 @@ nav a:hover {
 
 .logosContacto img {
     width: 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    /* Menu de Navegación */
+
+    .menuNav {
+        gap: 3px;
+        font-size: 17px;
+    }
+
+    .logo-container {
+        width: 8vw;
+    }
+
+
+    /* Contáctanos Contenedor general */
+
+    .contGeneralcont {
+        width: 95%;
+        gap: 10px;
+        margin-top: 100px;
+        margin-bottom: 140px;
+    }
+
+    .contContacto {
+        width: 300px;
+        height: auto;
+        padding: 77px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+        background-color: #f2f2f259;
+        border-radius: 15px;
+    }
+
+    /* Pie de página */
+
+    .pie-de-pagina {
+        padding: 20px;
+    }
+
+    .contenedorFT2,
+    .descripcion-foot {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 14px;
+    }
+
+
+    .logosContacto {
+        gap: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Media queries para teléfonos celulares */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        width: 100vw;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+
+    .menuNav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        background-color: var(--secondaryColor);
+
+    }
+
+    .logo-container {
+        position: relative;
+        width: 20vw;
+        height: auto;
+        z-index: 1;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    header input:not(:checked)+nav {
+        transform: translateY(-200%);
+        transition: all 1000ms ease-in-out;
+    }
+
+    header input:checked+nav {
+        background-color: var(--backgroundColor);
+        gap: 10px;
+        padding: 5px;
+        transform: translateY(0px);
+        transition: all 1000ms ease-in-out;
+    }
+
+
+    /* Contáctanos Contenedor general */
+
+    .contGeneralcont {
+        width: 100vw;
+        gap: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        margin-bottom: 140px;
+    }
+
+    .contact_form {
+        width: 350px;
+    }
+
+    .contact_form input {
+        width: 300px;
+    }
+
+    .contact_form textarea {
+        width: 300px;
+    }
+
+    .contact_form button {
+        width: 315px;
+    }
+
+    .formulario h1 {
+
+        font-size: 25px;
+    }
+
+    .formulario h3 {
+        font-size: 12px;
+    }
+
+
+/* Datos de contacto */ 
+
+.contContacto {
+    width: 350px;
+    padding: 15px;
+}
+
+.carro3_1 {
+    width: 250px;
+}
+
+
+
+
+    /* Pie de página */
+
+    .pie-de-pagina {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contenedorFT2,
+    .descripcion-foot {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 14px;
+    }
+
+
+    .logosContacto {
+        gap: 30px;
+    }
+
 }
