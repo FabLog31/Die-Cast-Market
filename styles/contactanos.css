@@ -134,7 +134,7 @@ nav a:hover {
 /* pie de pagina
 
 */
-
+/* 
 .pie-de-pagina {
     position: relative;
     left: 0;
@@ -170,6 +170,18 @@ nav a:hover {
     color: var(--backgroundColor);
     margin: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .logosContacto {
     display: flex;
@@ -241,4 +253,4 @@ nav a:hover {
 
 .btnlogin:hover {
     background: linear-gradient(180deg, rgba(86, 138, 185, 1) 53%, rgba(242, 242, 242, 1) 100%)
-}
+} */
