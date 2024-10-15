@@ -1,6 +1,5 @@
 # Die-Cast-Market
 
-<h1>Die-Cast-Market</h1>
 
 <h2>
 Scrum master de estre pyoyecto: Fabian Leonardo Martines
