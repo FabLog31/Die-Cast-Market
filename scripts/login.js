@@ -1,3 +1,4 @@
+
 // Objeto que simula una base de datos de usuarios
 const usersDB = {
     "usuario1": "contraseña1",

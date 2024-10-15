@@ -1,10 +1,16 @@
-/* Familia de la fuente de google */
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+.menuNav {
+    background-color: #f2f2f200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    font-family: var(--tipography);
+    font-size: 16px;
 
+}
 
-
-/* Variables */
-
+/* Estilos */
 :root {
     --primaryColor: #0D2F73;
     --secondaryColor: #568AB9;
@@ -66,7 +72,7 @@ input {
 
 nav a {
     display: block;
-    color: var(--tertiaryColor);
+    color: var(--backgroundColor);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -77,19 +83,55 @@ nav a {
 }
 
 .btnlogin {
-    background: linear-gradient(180deg, rgba(150, 18, 21, 1) 53%, rgba(204, 0, 0, 1) 100%);
-    color: var(--backgroundColor);
+    background: linear-gradient(180deg, rgba(150,18,21,1) 53%, rgba(204,0,0,1) 100%);
     border-radius: 25%;
-    padding: 15px 25px;
+    padding: 2px 15px;
 }
 
 nav a:hover {
-    border-bottom: 2px solid var(--tertiaryColor);
+    border-bottom: 2px solid var(--backgroundColor);
 }
 
 .btnlogin:hover {
-    background: linear-gradient(180deg, rgba(86, 138, 185, 1) 53%, rgba(242, 242, 242, 1) 100%);
-    border: 2px solid var(--backgroundColor);
+    background: linear-gradient(180deg, rgba(86,138,185,1) 53%, rgba(242,242,242,1) 100%)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EMPIEZA EL MAIN */
+.title {
+    color: var(--tertiaryColor);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.cajasHover {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.contDescripción {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -184,6 +226,21 @@ header input:checked+nav {
 }
 
 .contDescripcion .box .capa1 h4 {
+}
+
+.contDescripcion .box:hover>.capa1 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contDescripcion .box:hover:hover>.capa1 h4 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.contDescripcion .box .capa1 h4 {
     color: var(--tertiaryColor);
     font-size: 22px;
     margin-bottom: 120px;
@@ -228,6 +285,10 @@ header input:checked+nav {
     align-items: center;
     padding: 20px;
     gap: 10px;
+}
+
+:root {
+    --background-color: white;
 }
 
 .descripcion-foot {
