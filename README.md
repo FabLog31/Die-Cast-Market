@@ -2,8 +2,9 @@
 
 
 <h2>
-Scrum master de estre pyoyecto: Fabian Leonardo Martines
-Equipo Scrum del proyecto: Abril Lucia Castellanos
+Scrum master de estre proyecto: Fabian Leonardo martinez
+  <br>
+Equipo Scrum del proyecto: Abril Lucía Castellanos
 </h2>
 
 
