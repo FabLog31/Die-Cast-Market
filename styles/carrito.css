@@ -89,7 +89,7 @@ nav a:hover {
 
 .btnlogin:hover {
     background: linear-gradient(180deg, rgba(86, 138, 185, 1) 53%, rgba(242, 242, 242, 1) 100%);
-    border: 2px solid var(--backgroundColor);
+    border: 2px solid var(--tertiaryColor);
 
 }
 
@@ -117,13 +117,14 @@ header input:checked+nav {
     margin: 39px;
     align-items: center;
     gap: 30px
-    
 }
+
 .const {
     width: 750px;
     height: auto;
 }
-.ContConstr h2{
+
+.ContConstr h2 {
     text-align: center;
     font-size: 70px;
     color: var(--primaryColor);
@@ -203,13 +204,14 @@ header input:checked+nav {
         margin: 39px;
         align-items: center;
         gap: 30px
-        
     }
+
     .const {
         width: 750px;
         height: auto;
     }
-    .ContConstr h2{
+
+    .ContConstr h2 {
         text-align: center;
         font-size: 60px;
         color: var(--primaryColor);
@@ -245,6 +247,8 @@ header input:checked+nav {
         box-sizing: border-box;
     }
 
+    /* Menu Nav */
+
 
     .menuNav {
         position: absolute;
@@ -254,8 +258,7 @@ header input:checked+nav {
         align-items: center;
         width: 100vw;
         height: 100%;
-        background-color: var(--secondaryColor);
-
+        background-color: var(--backgroundColor);
     }
 
     .logo-container {
@@ -265,7 +268,19 @@ header input:checked+nav {
         z-index: 1;
     }
 
-       /* Cuerpo de construcción */
+    header input:not(:checked)+nav {
+        transform: translateY(-200%);
+        transition: all 1000ms ease-in-out;
+    }
+
+    header input:checked+nav {
+        gap: 5px;
+        padding: 5px;
+        transform: translateY(0px);
+        transition: all 1000ms ease-in-out;
+    }
+
+    /* Cuerpo de construcción */
 
     .ContConstr {
         width: 85vw;
@@ -275,13 +290,14 @@ header input:checked+nav {
         justify-content: center;
         align-items: center;
         gap: 30px
-        
     }
+
     .const {
         width: 350px;
         height: auto;
     }
-    .ContConstr h2{
+
+    .ContConstr h2 {
         text-align: center;
         font-size: 35px;
         color: var(--primaryColor);
